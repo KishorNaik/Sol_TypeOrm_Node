@@ -1,0 +1,33 @@
+{
+  "name": "Sol_TypeOrm_Node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node-dev --respawn --pretty --transpile-only ./src/Index.ts",
+    "debug": "ts-node-dev --inspect=4321 --pretty --transpile-only ./src/Index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KishorNaik/Sol_TypeOrm_Node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KishorNaik/Sol_TypeOrm_Node/issues"
+  },
+  "homepage": "https://github.com/KishorNaik/Sol_TypeOrm_Node#readme",
+  "devDependencies": {
+    "@types/node": "^16.10.2",
+    "mysql2": "^2.3.0",
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^10.2.1",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    "typeorm": "^0.2.38"
+  }
+}

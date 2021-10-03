@@ -1,0 +1,71 @@
+Set Debug or Run the Node in Visual Studio Code.
+Press F1-> type "Toggle Auto Attach" -> Select Smart.
+
+
+Step 1:
+To initialize the project
+
+Command:
+Cd D:\Practice\Javascript\MySelf\Day3
+npm init -y
+
+this will create a package.json file for you.
+
+Step 2:
+install required Dependencies
+    npm install --save-dev typescript
+    npm i --save-dev @types/node
+    npm i --save-dev ts-node ts-node-dev
+    npm install typeorm --save
+    npm install reflect-metadata --save
+    npm install mysql2 --save-dev
+   
+Step 3:
+Initialize TypeScript in Node.js, it will create tsconfig.json file
+npx tsc --init [Check file]
+
+Also, make sure you are using TypeScript version 3.3 or higher, and you have enabled the following settings in tsconfig.json:
+
+"emitDecoratorMetadata": true,
+"experimentalDecorators": true,
+
+add include property in tsconfig.json file
+"include": [
+     "src/**/*.ts",
+     "src/**/*.js"
+  ]
+
+Step 4:
+To run this code we have to add a start script in the package.json file
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node-dev --respawn --pretty --transpile-only ./src/Program.ts",
+    "debug": "ts-node-dev --inspect=4321 --pretty --transpile-only ./src/Program.ts",
+    "ts-compile":"tsc"
+}
+
+Step 5:
+npm run debug or start
+
+Step 6:
+Create a ormconfig.json file and the following json content
+
+{
+    "type": "mysql",
+    "host": "localhost",
+    "port":3306,
+    "username":"root",
+    "password":"root",
+    "database": "Books",
+    "synchronize": true,
+    "logging": false,
+    "entities": [
+      "src/Entities/**/*.ts"
+   ]
+  }
+
+Step 7:
+Create a Entity folder, add the Book Entity. [check Source Code]
+
+Step 8:
+Create a Repository folder, add the Book Repository. [Check Source Code]
